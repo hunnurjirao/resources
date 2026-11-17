@@ -311,6 +311,22 @@
       "tag": "Course",
       "cat": "AI",
       "url": "https://www.deeplearning.ai/courses/chatgpt-prompt-eng"
+    },
+    {
+      "date": "2026-08-22",
+      "title": "Practical Guide to Apache Airflow 3",
+      "note": "Free PDF: basics to production and migration",
+      "tag": "PDF",
+      "cat": "Data Eng",
+      "url": "https://drive.google.com/file/d/1xMgqsV6Uj5JOPhwWL1r1HgcprqNP4Eym/view?usp=sharing"
+    },
+    {
+      "date": "2026-08-08",
+      "title": "Data Engineer 6-Month Roadmap",
+      "note": "Step-by-step plan to become a data engineer",
+      "tag": "Guide",
+      "cat": "Data Eng",
+      "url": "https://docs.google.com/document/d/1_z8xyZZqEgIhydzqVTsMeV5xwKV5PnK6fgTvV7uS3Oo/edit?usp=sharing"
     }
   ],
   "categories": [
