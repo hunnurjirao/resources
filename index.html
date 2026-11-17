@@ -108,6 +108,18 @@ h2::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,rgba(255
 .mini-row{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}
 .mini{display:flex;align-items:center;justify-content:center;min-height:48px;border-radius:14px;background:#fff;border:1px solid var(--grey);
   color:var(--ink);text-decoration:none;font-weight:700;font-size:14.5px;text-align:center;padding:0 8px;transition:transform .15s,border-color .15s}
+.nb{position:relative;margin-top:12px;padding:16px 16px 16px 34px;border-radius:18px;border:1px solid #cfd9ff;color:var(--ink);text-decoration:none;display:block;overflow:hidden;
+background:repeating-linear-gradient(180deg,transparent 0 27px,rgba(47,91,255,.13) 27px 28px),#fbfcff;box-shadow:0 8px 22px rgba(47,91,255,.12);transition:transform .15s}
+.nb::before{content:"";position:absolute;left:22px;top:0;bottom:0;width:2px;background:rgba(255,90,90,.45)}
+.nb:active{transform:scale(.98)}
+.nb .nb-k{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.08em;color:#fff;background:var(--blue);padding:3px 9px;border-radius:99px}
+.nb h4{margin:8px 0 4px;font-size:19px;font-weight:800;letter-spacing:-.01em}
+.nb h4 i{font-family:Georgia,serif;font-weight:400;color:var(--blue)}
+.nb p{margin:0 0 10px;font-size:13.5px;line-height:1.4;color:#2a3256}
+.nb .tg{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+.nb .tg span{font-size:12px;font-weight:700;color:var(--blue);background:#fff;border:1px solid #cfd9ff;padding:3px 9px;border-radius:99px}
+.nb .go2{display:flex;align-items:center;justify-content:space-between;font-size:13px;font-weight:800;color:var(--blue)}
+.nb .go2 em{font-style:normal;color:#5a6390;font-weight:600}
 .mini:hover{border-color:var(--blue)}
 
 /* search */
@@ -253,7 +265,13 @@ fetch('links.json',{cache:'no-cache'}).then(r=>r.json()).then(d=>{
   cta.innerHTML='<span>Open lakebench.in</span>'+arrow;inn.append(cta);
   const row=el('div','mini-row');
   L.buttons.forEach(b=>{const a=el('a','mini',b.title);a.href=b.url;a.target='_blank';a.rel='noopener';row.append(a)});
-  inn.append(row);box.append(inn);
+  inn.append(row);
+  if(L.notebooks){const N=L.notebooks,a=el('a','nb');a.href=N.url;a.target='_blank';a.rel='noopener';
+    const h=el('h4');h.innerHTML='<b>'+N.count+'+</b> <i>handwritten</i> notebooks';
+    const tg=el('div','tg');N.tags.forEach(t=>tg.append(el('span',null,t)));
+    const g=el('div','go2');g.append(el('em',null,N.for),el('span',null,N.cta+' →'));
+    a.append(el('span','nb-k','FOR STUDENTS'),h,el('p',null,N.pitch),tg,g);inn.append(a);}
+  box.append(inn);
   io.observe(box);
   // count up when visible
   new IntersectionObserver((es,ob)=>es.forEach(e=>{if(!e.isIntersecting)return;ob.disconnect();

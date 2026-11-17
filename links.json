@@ -32,7 +32,6 @@
     "features": [
       "Predict the output, then run it",
       "Interview-style practice problems",
-      "Handwritten-style notebooks for quick revision",
       "Timed mock interviews with scoring",
       "Case studies and CV projects",
       "Jobs board and progress tracker"
@@ -41,10 +40,6 @@
       {
         "title": "Free studio",
         "url": "https://lakebench.in/studio"
-      },
-      {
-        "title": "Handwritten notebooks",
-        "url": "https://lakebench.in/notes"
       },
       {
         "title": "Daily problem",
@@ -58,7 +53,28 @@
         "title": "Jobs board",
         "url": "https://lakebench.in/jobs"
       }
-    ]
+    ],
+    "notebooks": {
+      "title": "Handwritten notebooks",
+      "count": 30,
+      "pitch": "Notes you would actually keep. Diagrams, tables and worked examples for every topic, made for students and freshers.",
+      "tags": [
+        "SQL",
+        "Python",
+        "PySpark",
+        "Airflow",
+        "Kafka",
+        "dbt",
+        "Cloud",
+        "DBMS",
+        "OS",
+        "Networks",
+        "Interview prep"
+      ],
+      "for": "Great for final-year students and placement prep",
+      "cta": "Browse notebooks",
+      "url": "https://lakebench.in/notes"
+    }
   },
   "links": [
     {
