@@ -32,6 +32,7 @@
     "features": [
       "Predict the output, then run it",
       "Interview-style practice problems",
+      "Handwritten-style notebooks for quick revision",
       "Timed mock interviews with scoring",
       "Case studies and CV projects",
       "Jobs board and progress tracker"
@@ -40,6 +41,10 @@
       {
         "title": "Free studio",
         "url": "https://lakebench.in/studio"
+      },
+      {
+        "title": "Handwritten notebooks",
+        "url": "https://lakebench.in/notes"
       },
       {
         "title": "Daily problem",
