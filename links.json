@@ -57,7 +57,7 @@
     "notebooks": {
       "title": "Handwritten notebooks",
       "count": 30,
-      "pitch": "Notes you would actually keep. Diagrams, tables and worked examples for every topic, made for students and freshers.",
+      "pitch": "SQL, Python, PySpark, Airflow, Kafka and more.",
       "tags": [
         "SQL",
         "Python",
