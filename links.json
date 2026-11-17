@@ -263,6 +263,54 @@
       "tag": "Course",
       "cat": "AI",
       "url": "https://huggingface.co/learn/agents-course"
+    },
+    {
+      "date": "2026-06-11",
+      "title": "roadmap.sh",
+      "note": "Clear learning roadmaps for developers",
+      "tag": "Site",
+      "cat": "Tools",
+      "url": "https://roadmap.sh"
+    },
+    {
+      "date": "2026-06-09",
+      "title": "Awesome Generative AI",
+      "note": "Curated GenAI, LLM and agent resources",
+      "tag": "GitHub",
+      "cat": "AI",
+      "url": "https://github.com/steven2358/awesome-generative-ai"
+    },
+    {
+      "date": "2026-06-08",
+      "title": "Hugging Face NLP course",
+      "note": "Transformers, LLMs and fine-tuning, with certificate",
+      "tag": "Course",
+      "cat": "AI",
+      "url": "https://huggingface.co/learn/nlp-course"
+    },
+    {
+      "date": "2026-06-08",
+      "title": "Google AI Essentials",
+      "note": "Beginner-friendly AI course",
+      "tag": "Course",
+      "cat": "AI",
+      "url": "https://grow.google/intl/en_in/ai-essentials/"
+    },
+    {
+      "date": "2026-06-08",
+      "title": "Microsoft AI-900",
+      "note": "Azure AI Fundamentals certification",
+      "tag": "Course",
+      "cat": "AI",
+      "url": "https://learn.microsoft.com/en-us/credentials/certifications/exams/ai-900/"
+    },
+    {
+      "date": "2026-06-08",
+      "title": "ChatGPT Prompt Engineering",
+      "note": "Short free course from DeepLearning.AI",
+      "tag": "Course",
+      "cat": "AI",
+      "url": "https://www.deeplearning.ai/courses/chatgpt-prompt-eng"
     }
   ],
   "categories": [
@@ -274,5 +322,6 @@
     "Cloud & Linux",
     "AI",
     "Tools"
-  ]
+  ],
+  "youtube": "https://www.youtube.com/@rajahunnur"
 }
