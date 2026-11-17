@@ -1,0 +1,25 @@
+{
+  "name": "hunnur.ai",
+  "tagline": "Free data engineering resources, one reel at a time.",
+  "instagram": "https://www.instagram.com/hunnur.ai/",
+  "links": [
+    {
+      "title": "Data Engineering Zoomcamp",
+      "note": "Free 9-week course with a real project",
+      "url": "https://github.com/DataTalksClub/data-engineering-zoomcamp",
+      "date": "2026-09-01"
+    },
+    {
+      "title": "Data Engineer Handbook",
+      "note": "Free GitHub repo to learn data engineering",
+      "url": "https://github.com/DataExpert-io/data-engineer-handbook",
+      "date": "2026-07-19"
+    },
+    {
+      "title": "SQLBolt",
+      "note": "Free interactive SQL lessons",
+      "url": "https://sqlbolt.com",
+      "date": "2026-06-07"
+    }
+  ]
+}
