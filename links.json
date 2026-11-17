@@ -57,6 +57,46 @@
   },
   "links": [
     {
+      "date": "2026-11-16",
+      "title": "OverTheWire Bandit",
+      "note": "Learn Linux commands by playing a free game",
+      "tag": "Site",
+      "cat": "Cloud & Linux",
+      "url": "https://overthewire.org/wargames/bandit/"
+    },
+    {
+      "date": "2026-11-11",
+      "title": "Awesome Public Datasets",
+      "note": "1000+ free datasets to practise pipelines on",
+      "tag": "GitHub",
+      "cat": "Data Eng",
+      "url": "https://github.com/awesomedata/awesome-public-datasets"
+    },
+    {
+      "date": "2026-11-07",
+      "title": "Data Analyst Roadmap",
+      "note": "GitHub repo to start a data analytics career",
+      "tag": "GitHub",
+      "cat": "Data Eng",
+      "url": "https://github.com/codenihar/data-analyst-roadmap"
+    },
+    {
+      "date": "2026-11-02",
+      "title": "Astronomer Academy",
+      "note": "Free Apache Airflow learning for beginners",
+      "tag": "Course",
+      "cat": "Data Eng",
+      "url": "https://academy.astronomer.io"
+    },
+    {
+      "date": "2026-11-01",
+      "title": "Tech jobs board",
+      "note": "Latest tech jobs with filters and resume check",
+      "tag": "Tool",
+      "cat": "Tools",
+      "url": "https://lakebench.in/jobs"
+    },
+    {
       "date": "2026-10-26",
       "title": "JSON Crack",
       "note": "Turn complex JSON into a visual graph",
@@ -145,6 +185,22 @@
       "url": "https://pyspark.in"
     },
     {
+      "date": "2026-08-22",
+      "title": "Practical Guide to Apache Airflow 3",
+      "note": "Free PDF: basics to production and migration",
+      "tag": "PDF",
+      "cat": "Data Eng",
+      "url": "https://drive.google.com/file/d/1xMgqsV6Uj5JOPhwWL1r1HgcprqNP4Eym/view?usp=sharing"
+    },
+    {
+      "date": "2026-08-08",
+      "title": "Data Engineer 6-Month Roadmap",
+      "note": "Step-by-step plan to become a data engineer",
+      "tag": "Guide",
+      "cat": "Data Eng",
+      "url": "https://docs.google.com/document/d/1_z8xyZZqEgIhydzqVTsMeV5xwKV5PnK6fgTvV7uS3Oo/edit?usp=sharing"
+    },
+    {
       "date": "2026-08-04",
       "title": "AI Engineer 3-hour course",
       "note": "Video course on AI engineering fundamentals",
@@ -217,6 +273,14 @@
       "url": "https://www.mockaroo.com"
     },
     {
+      "date": "2026-06-11",
+      "title": "roadmap.sh",
+      "note": "Clear learning roadmaps for developers",
+      "tag": "Site",
+      "cat": "Tools",
+      "url": "https://roadmap.sh"
+    },
+    {
       "date": "2026-06-09",
       "title": "System Design Primer",
       "note": "Learn how to design large systems",
@@ -233,28 +297,12 @@
       "url": "https://github.com/igorbarinov/awesome-data-engineering"
     },
     {
-      "date": "2026-06-07",
-      "title": "SQLBolt",
-      "note": "Free interactive SQL lessons",
-      "tag": "Site",
-      "cat": "SQL",
-      "url": "https://sqlbolt.com"
-    },
-    {
-      "date": "2026-06-07",
-      "title": "SQLZoo",
-      "note": "Practise SQL queries online",
-      "tag": "Site",
-      "cat": "SQL",
-      "url": "https://sqlzoo.net"
-    },
-    {
-      "date": "2026-06-07",
-      "title": "DataLemur",
-      "note": "SQL interview questions from real companies",
-      "tag": "Site",
-      "cat": "SQL",
-      "url": "https://datalemur.com"
+      "date": "2026-06-09",
+      "title": "Awesome Generative AI",
+      "note": "Curated GenAI, LLM and agent resources",
+      "tag": "GitHub",
+      "cat": "AI",
+      "url": "https://github.com/steven2358/awesome-generative-ai"
     },
     {
       "date": "2026-06-08",
@@ -263,22 +311,6 @@
       "tag": "Course",
       "cat": "AI",
       "url": "https://huggingface.co/learn/agents-course"
-    },
-    {
-      "date": "2026-06-11",
-      "title": "roadmap.sh",
-      "note": "Clear learning roadmaps for developers",
-      "tag": "Site",
-      "cat": "Tools",
-      "url": "https://roadmap.sh"
-    },
-    {
-      "date": "2026-06-09",
-      "title": "Awesome Generative AI",
-      "note": "Curated GenAI, LLM and agent resources",
-      "tag": "GitHub",
-      "cat": "AI",
-      "url": "https://github.com/steven2358/awesome-generative-ai"
     },
     {
       "date": "2026-06-08",
@@ -313,20 +345,28 @@
       "url": "https://www.deeplearning.ai/courses/chatgpt-prompt-eng"
     },
     {
-      "date": "2026-08-22",
-      "title": "Practical Guide to Apache Airflow 3",
-      "note": "Free PDF: basics to production and migration",
-      "tag": "PDF",
-      "cat": "Data Eng",
-      "url": "https://drive.google.com/file/d/1xMgqsV6Uj5JOPhwWL1r1HgcprqNP4Eym/view?usp=sharing"
+      "date": "2026-06-07",
+      "title": "SQLBolt",
+      "note": "Free interactive SQL lessons",
+      "tag": "Site",
+      "cat": "SQL",
+      "url": "https://sqlbolt.com"
     },
     {
-      "date": "2026-08-08",
-      "title": "Data Engineer 6-Month Roadmap",
-      "note": "Step-by-step plan to become a data engineer",
-      "tag": "Guide",
-      "cat": "Data Eng",
-      "url": "https://docs.google.com/document/d/1_z8xyZZqEgIhydzqVTsMeV5xwKV5PnK6fgTvV7uS3Oo/edit?usp=sharing"
+      "date": "2026-06-07",
+      "title": "SQLZoo",
+      "note": "Practise SQL queries online",
+      "tag": "Site",
+      "cat": "SQL",
+      "url": "https://sqlzoo.net"
+    },
+    {
+      "date": "2026-06-07",
+      "title": "DataLemur",
+      "note": "SQL interview questions from real companies",
+      "tag": "Site",
+      "cat": "SQL",
+      "url": "https://datalemur.com"
     }
   ],
   "categories": [
