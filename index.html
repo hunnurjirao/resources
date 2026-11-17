@@ -110,6 +110,18 @@ h2::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,rgba(255
   color:var(--ink);text-decoration:none;font-weight:700;font-size:14.5px;text-align:center;padding:0 8px;transition:transform .15s,border-color .15s}
 .mini:hover{border-color:var(--blue)}
 
+/* filter chips */
+#count{margin-left:auto;order:3;font-size:12px;letter-spacing:.04em;color:var(--blue2)}
+h2 #count{margin-left:0}
+.chips{display:flex;gap:8px;overflow-x:auto;margin:0 -16px 14px;padding:2px 16px 6px;scroll-snap-type:x proximity;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;scroll-snap-align:start;min-height:40px;padding:0 16px;border-radius:99px;border:1px solid rgba(255,255,255,.18);
+  background:rgba(255,255,255,.06);color:var(--grey);font:700 14px/1 inherit;font-family:inherit;cursor:pointer;transition:background .2s,color .2s,transform .15s,border-color .2s}
+.chip:active{transform:scale(.95)}
+.chip.on{background:var(--white);color:var(--ink);border-color:var(--white)}
+@keyframes cin{from{opacity:0;transform:translateY(14px) scale(.98)}}
+.card.fresh{animation:cin .45s cubic-bezier(.2,.8,.2,1) backwards}
+
 /* resource cards */
 .card{position:relative;display:flex;align-items:center;gap:14px;min-height:72px;margin-bottom:10px;padding:12px 14px;border-radius:var(--r);
   background:var(--white);color:var(--ink);text-decoration:none;overflow:hidden;transition:transform .15s,box-shadow .2s;
@@ -154,7 +166,8 @@ footer{margin-top:26px;text-align:center;color:var(--mute);font-size:12.5px}
 
   <section class="lb rv" id="lb"></section>
 
-  <h2 class="rv">Free resources from my reels</h2>
+  <h2 class="rv">Free resources from my reels <span id="count"></span></h2>
+  <div class="chips" id="chips" role="tablist" aria-label="Filter resources"></div>
   <div id="list"></div>
 
   <a class="ig rv" id="ig" target="_blank" rel="noopener">
@@ -220,22 +233,33 @@ fetch('links.json',{cache:'no-cache'}).then(r=>r.json()).then(d=>{
   }),{threshold:.4}).observe(stats);
 
   // resource cards
-  const list=$('list');
-  [...d.links].sort((a,b)=>(b.date||'').localeCompare(a.date||'')).forEach((l,i)=>{
-    const a=el('a','card');a.href=l.url;a.target='_blank';a.rel='noopener';
+  const list=$('list'),chips=$('chips');
+  const all=[...d.links].sort((a,b)=>(b.date||'').localeCompare(a.date||''));
+  $('count').textContent='· '+all.length;
+  const draw=cat=>{
+   list.textContent='';
+   all.filter(l=>cat==='All'||l.cat===cat).forEach((l,i)=>{
+    const a=el('a','card fresh');a.href=l.url;a.target='_blank';a.rel='noopener';
     a.append(el('div','ico',l.tag||'Link'));
     const t=el('div','txt');t.append(el('b',null,l.title),el('span',null,l.note||''));
     const g=el('div','go');g.innerHTML=arrow;
     a.append(t,g);
-    if(i===0)a.append(el('span','latest','LATEST'));
+    if(i===0&&cat==='All')a.append(el('span','latest','LATEST'));
     const glow=ev=>{const r=a.getBoundingClientRect(),p=ev.touches?ev.touches[0]:ev;
       a.style.setProperty('--mx',(p.clientX-r.left)+'px');a.style.setProperty('--my',(p.clientY-r.top)+'px')};
     a.addEventListener('pointermove',glow);
     a.addEventListener('touchstart',e=>{glow(e);a.classList.add('touch')},{passive:true});
     a.addEventListener('touchend',()=>setTimeout(()=>a.classList.remove('touch'),250));
-    a.style.transitionDelay=(i*70)+'ms';
-    list.append(a);reveal(a);
+    a.style.animationDelay=Math.min(i,8)*45+'ms';
+    list.append(a);
+   });
+  };
+  (d.categories||['All']).forEach((c,i)=>{
+    const b=el('button','chip'+(i?'':' on'),c);b.type='button';b.setAttribute('role','tab');
+    b.onclick=()=>{chips.querySelectorAll('.chip').forEach(x=>x.classList.remove('on'));b.classList.add('on');draw(c)};
+    chips.append(b);
   });
+  draw('All');
   document.querySelectorAll('h2.rv,#ig').forEach(n=>io.observe(n));
 }).catch(()=>{document.querySelector('main').append(el('p','bio','Links are loading. Please refresh.'))});
 </script>

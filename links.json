@@ -10,11 +10,25 @@
     "url": "https://lakebench.in",
     "pitch": "Learn and practise data engineering in your browser. No cluster. No install. Just the tab.",
     "stats": [
-      { "n": 200, "label": "lessons" },
-      { "n": 380, "label": "practice problems" },
-      { "n": 30, "label": "notebooks" }
+      {
+        "n": 200,
+        "label": "lessons"
+      },
+      {
+        "n": 380,
+        "label": "practice problems"
+      },
+      {
+        "n": 30,
+        "label": "notebooks"
+      }
     ],
-    "tags": ["SQL", "Python", "Pandas", "PySpark"],
+    "tags": [
+      "SQL",
+      "Python",
+      "Pandas",
+      "PySpark"
+    ],
     "features": [
       "Predict the output, then run it",
       "Interview-style practice problems",
@@ -23,33 +37,242 @@
       "Jobs board and progress tracker"
     ],
     "buttons": [
-      { "title": "Free studio", "url": "https://lakebench.in/studio" },
-      { "title": "Daily problem", "url": "https://lakebench.in/daily" },
-      { "title": "Start learning", "url": "https://lakebench.in/learn" },
-      { "title": "Jobs board", "url": "https://lakebench.in/jobs" }
+      {
+        "title": "Free studio",
+        "url": "https://lakebench.in/studio"
+      },
+      {
+        "title": "Daily problem",
+        "url": "https://lakebench.in/daily"
+      },
+      {
+        "title": "Start learning",
+        "url": "https://lakebench.in/learn"
+      },
+      {
+        "title": "Jobs board",
+        "url": "https://lakebench.in/jobs"
+      }
     ]
   },
   "links": [
     {
+      "date": "2026-10-26",
+      "title": "JSON Crack",
+      "note": "Turn complex JSON into a visual graph",
+      "tag": "Tool",
+      "cat": "Tools",
+      "url": "https://jsoncrack.com/"
+    },
+    {
+      "date": "2026-10-22",
+      "title": "PySpark data skew explained",
+      "note": "Why Spark jobs get stuck on the last task",
+      "tag": "Guide",
+      "cat": "Spark",
+      "url": "https://lakebench.in/guides/pyspark-data-skew-explained"
+    },
+    {
+      "date": "2026-10-14",
+      "title": "End-to-end data engineering project",
+      "note": "A complete project on one GitHub repo",
+      "tag": "GitHub",
+      "cat": "Data Eng",
+      "url": "https://github.com/airscholar/e2e-data-engineering"
+    },
+    {
+      "date": "2026-09-23",
+      "title": "Kafka visualisation",
+      "note": "See how Kafka works, step by step",
+      "tag": "Tool",
+      "cat": "Kafka",
+      "url": "https://softwaremill.com/kafka-visualisation/"
+    },
+    {
+      "date": "2026-09-19",
+      "title": "Learn Git Branching",
+      "note": "Practise Git visually in your browser",
+      "tag": "Tool",
+      "cat": "Tools",
+      "url": "https://learngitbranching.js.org"
+    },
+    {
+      "date": "2026-09-11",
+      "title": "SadServers",
+      "note": "Fix real broken Linux servers for practice",
+      "tag": "Tool",
+      "cat": "Cloud & Linux",
+      "url": "https://sadservers.com"
+    },
+    {
+      "date": "2026-09-08",
+      "title": "Data Engineering Wiki",
+      "note": "Beginner to advanced learning path",
+      "tag": "Guide",
+      "cat": "Data Eng",
+      "url": "https://dataengineering.wiki"
+    },
+    {
+      "date": "2026-09-05",
+      "title": "DuckDB in the browser",
+      "note": "Query CSV and Parquet with SQL, no install",
+      "tag": "Tool",
+      "cat": "SQL",
+      "url": "https://shell.duckdb.org/"
+    },
+    {
+      "date": "2026-09-01",
       "title": "Data Engineering Zoomcamp",
       "note": "Free 9-week course with a real project",
       "tag": "Course",
-      "url": "https://github.com/DataTalksClub/data-engineering-zoomcamp",
-      "date": "2026-09-01"
+      "cat": "Data Eng",
+      "url": "https://github.com/DataTalksClub/data-engineering-zoomcamp"
     },
     {
+      "date": "2026-08-29",
+      "title": "Streamify",
+      "note": "End-to-end streaming data engineering project",
+      "tag": "GitHub",
+      "cat": "Data Eng",
+      "url": "https://github.com/ankurchavda/streamify"
+    },
+    {
+      "date": "2026-08-26",
+      "title": "PySpark.in",
+      "note": "Learn PySpark from scratch",
+      "tag": "Site",
+      "cat": "Spark",
+      "url": "https://pyspark.in"
+    },
+    {
+      "date": "2026-08-04",
+      "title": "AI Engineer 3-hour course",
+      "note": "Video course on AI engineering fundamentals",
+      "tag": "Video",
+      "cat": "AI",
+      "url": "https://drive.google.com/file/d/12NoQjSLSvu14u0Ot3j-PdqAeu2C9KYSb/view?usp=drivesdk"
+    },
+    {
+      "date": "2026-08-02",
+      "title": "Data Engineering Vault",
+      "note": "A deep knowledge base on data engineering",
+      "tag": "Guide",
+      "cat": "Data Eng",
+      "url": "https://www.ssp.sh/brain/data-engineering/"
+    },
+    {
+      "date": "2026-07-27",
+      "title": "Floci",
+      "note": "Run cloud emulators locally for free",
+      "tag": "Tool",
+      "cat": "Cloud & Linux",
+      "url": "https://floci.io"
+    },
+    {
+      "date": "2026-07-22",
+      "title": "Confluent Developer",
+      "note": "Learn Kafka and Flink hands-on",
+      "tag": "Course",
+      "cat": "Kafka",
+      "url": "https://developer.confluent.io/get-started/"
+    },
+    {
+      "date": "2026-07-19",
       "title": "Data Engineer Handbook",
       "note": "Free GitHub repo to learn data engineering",
       "tag": "GitHub",
-      "url": "https://github.com/DataExpert-io/data-engineer-handbook",
-      "date": "2026-07-19"
+      "cat": "Data Eng",
+      "url": "https://github.com/DataExpert-io/data-engineer-handbook"
     },
     {
+      "date": "2026-07-14",
+      "title": "SQL interview questions and answers",
+      "note": "Joins, window functions and CTEs with answers",
+      "tag": "GitHub",
+      "cat": "SQL",
+      "url": "https://github.com/sanketrs/sql-interview-preparation-questions-with-answers"
+    },
+    {
+      "date": "2026-07-14",
+      "title": "SQL Tutorials",
+      "note": "Hands-on SQL tutorial repo",
+      "tag": "GitHub",
+      "cat": "SQL",
+      "url": "https://github.com/gowthamrajk/SQL-Tutorials"
+    },
+    {
+      "date": "2026-07-08",
+      "title": "Spark Playground",
+      "note": "Practise Spark without setting it up",
+      "tag": "Tool",
+      "cat": "Spark",
+      "url": "https://www.sparkplayground.com"
+    },
+    {
+      "date": "2026-07-03",
+      "title": "Mockaroo",
+      "note": "Generate realistic datasets for pipelines",
+      "tag": "Tool",
+      "cat": "Data Eng",
+      "url": "https://www.mockaroo.com"
+    },
+    {
+      "date": "2026-06-09",
+      "title": "System Design Primer",
+      "note": "Learn how to design large systems",
+      "tag": "GitHub",
+      "cat": "Data Eng",
+      "url": "https://github.com/donnemartin/system-design-primer"
+    },
+    {
+      "date": "2026-06-09",
+      "title": "Awesome Data Engineering",
+      "note": "A curated list of data engineering resources",
+      "tag": "GitHub",
+      "cat": "Data Eng",
+      "url": "https://github.com/igorbarinov/awesome-data-engineering"
+    },
+    {
+      "date": "2026-06-07",
       "title": "SQLBolt",
       "note": "Free interactive SQL lessons",
-      "tag": "SQL",
-      "url": "https://sqlbolt.com",
-      "date": "2026-06-07"
+      "tag": "Site",
+      "cat": "SQL",
+      "url": "https://sqlbolt.com"
+    },
+    {
+      "date": "2026-06-07",
+      "title": "SQLZoo",
+      "note": "Practise SQL queries online",
+      "tag": "Site",
+      "cat": "SQL",
+      "url": "https://sqlzoo.net"
+    },
+    {
+      "date": "2026-06-07",
+      "title": "DataLemur",
+      "note": "SQL interview questions from real companies",
+      "tag": "Site",
+      "cat": "SQL",
+      "url": "https://datalemur.com"
+    },
+    {
+      "date": "2026-06-08",
+      "title": "Hugging Face Agents course",
+      "note": "Free course on building AI agents",
+      "tag": "Course",
+      "cat": "AI",
+      "url": "https://huggingface.co/learn/agents-course"
     }
+  ],
+  "categories": [
+    "All",
+    "Data Eng",
+    "SQL",
+    "Spark",
+    "Kafka",
+    "Cloud & Linux",
+    "AI",
+    "Tools"
   ]
 }
