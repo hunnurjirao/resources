@@ -2,53 +2,245 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>hunnur.ai links</title>
-<meta name="description" content="Free data engineering resources from hunnur.ai reels.">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0F1424">
+<title>Hunnur | hunnur.ai links</title>
+<meta name="description" content="Free data engineering resources and LakeBench, from @hunnur.ai.">
+<meta property="og:title" content="Hunnur | hunnur.ai">
+<meta property="og:description" content="Free data engineering resources and LakeBench.">
+<meta property="og:image" content="https://hunnurjirao.github.io/links/dp.jpg">
+<link rel="icon" href="dp.jpg">
 <style>
-:root{--ink:#0F1424;--blue:#2F5BFF;--white:#F4F6FB;--grey:#E6E9F2}
-*{box-sizing:border-box}
-body{margin:0;min-height:100vh;background:var(--ink);color:var(--white);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;display:flex;justify-content:center;overflow-x:hidden}
-.bg{position:fixed;inset:0;z-index:0;background:radial-gradient(40% 35% at 20% 20%,rgba(47,91,255,.45),transparent 70%),radial-gradient(35% 30% at 85% 75%,rgba(47,91,255,.30),transparent 70%);animation:drift 14s ease-in-out infinite alternate}
-@keyframes drift{to{transform:translate(4%,3%) scale(1.15)}}
-main{position:relative;z-index:1;width:100%;max-width:480px;padding:48px 16px 40px}
-h1{font-size:34px;line-height:1.1;margin:0 0 8px;text-align:center}
-h1 em{font-family:Georgia,"Times New Roman",serif;font-style:italic;color:#7C98FF}
-.tag{text-align:center;color:var(--grey);opacity:.8;margin:0 0 28px}
-a.card{display:block;background:var(--white);color:var(--ink);text-decoration:none;border-radius:16px;padding:16px 18px;margin-bottom:12px;transition:transform .15s,box-shadow .15s;animation:in .5s both}
-a.card:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(47,91,255,.4)}
-a.card b{display:block;font-size:17px}
-a.card span{font-size:14px;color:#4a5170}
-a.card i{float:right;color:var(--blue);font-style:normal;font-weight:700}
-a.ig{background:var(--blue);color:#fff}
-a.ig span{color:#dfe6ff}
-@keyframes in{from{opacity:0;transform:translateY(10px)}}
+:root{
+  --ink:#0F1424;--ink2:#161d36;--blue:#2F5BFF;--blue2:#7C98FF;
+  --white:#F4F6FB;--grey:#E6E9F2;--mute:#9aa4c7;
+  --r:20px;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{background:var(--ink)}
+body{margin:0;min-height:100svh;background:var(--ink);color:var(--white);
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,sans-serif;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+  padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
+/* animated background */
+.bg{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none}
+.bg::before{content:"";position:absolute;inset:-20%;
+  background:
+    radial-gradient(38% 30% at 15% 12%,rgba(47,91,255,.55),transparent 70%),
+    radial-gradient(34% 28% at 90% 35%,rgba(124,152,255,.30),transparent 70%),
+    radial-gradient(40% 32% at 25% 90%,rgba(47,91,255,.40),transparent 70%);
+  animation:drift 16s ease-in-out infinite alternate}
+.bg::after{content:"";position:absolute;inset:0;
+  background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);
+  background-size:36px 36px;
+  -webkit-mask-image:radial-gradient(70% 55% at 50% 25%,#000,transparent);mask-image:radial-gradient(70% 55% at 50% 25%,#000,transparent);
+  animation:grid 12s linear infinite}
+@keyframes drift{0%{transform:translate3d(-3%,-2%,0) scale(1)}100%{transform:translate3d(4%,3%,0) scale(1.18)}}
+@keyframes grid{to{background-position:0 36px,36px 0}}
+.orb{position:absolute;border-radius:50%;filter:blur(2px);opacity:.55;
+  background:radial-gradient(circle at 30% 30%,#9fb3ff,var(--blue));animation:float 9s ease-in-out infinite}
+.orb.a{width:14px;height:14px;left:12%;top:30%}
+.orb.b{width:9px;height:9px;left:82%;top:18%;animation-delay:-3s}
+.orb.c{width:18px;height:18px;left:70%;top:62%;animation-delay:-5s}
+.orb.d{width:8px;height:8px;left:20%;top:75%;animation-delay:-7s}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-26px)}}
+
+main{position:relative;z-index:1;width:100%;max-width:520px;margin:0 auto;padding:36px 16px 44px}
+
+/* hero */
+.hero{text-align:center}
+.avatar{position:relative;width:132px;height:132px;margin:0 auto 18px;border-radius:50%;
+  display:grid;place-items:center;animation:pop .8s cubic-bezier(.2,1.4,.4,1) both}
+.avatar::before{content:"";position:absolute;inset:-5px;border-radius:50%;
+  background:conic-gradient(from 0deg,var(--blue),#fff,var(--blue2),var(--blue));animation:spin 4s linear infinite}
+.avatar::after{content:"";position:absolute;inset:-5px;border-radius:50%;box-shadow:0 0 0 0 rgba(47,91,255,.6);animation:pulse 2.4s ease-out infinite}
+.avatar img{position:relative;z-index:1;width:124px;height:124px;border-radius:50%;object-fit:cover;border:4px solid var(--ink)}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(47,91,255,.55)}100%{box-shadow:0 0 0 26px rgba(47,91,255,0)}}
+@keyframes pop{from{opacity:0;transform:scale(.6)}}
+h1{margin:0;font-size:32px;line-height:1.1;letter-spacing:-.5px;animation:up .6s .15s both}
+h1 em{font-family:Georgia,"Times New Roman",serif;font-style:italic;color:var(--blue2);font-weight:400}
+.role{margin:8px 0 0;color:var(--grey);font-weight:600;animation:up .6s .25s both}
+.type{margin:10px auto 0;min-height:22px;color:var(--blue2);font-size:15px;font-weight:600;animation:up .6s .35s both}
+.type::after{content:"";display:inline-block;width:2px;height:1em;background:var(--blue2);margin-left:3px;vertical-align:-2px;animation:blink 1s steps(1) infinite}
+.bio{margin:12px auto 0;max-width:340px;color:var(--mute);font-size:15px;line-height:1.5;animation:up .6s .45s both}
+.pill{display:inline-flex;align-items:center;gap:6px;margin-top:12px;padding:6px 12px;border-radius:99px;
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);font-size:13px;color:var(--grey);animation:up .6s .55s both}
+@keyframes blink{50%{opacity:0}}
+@keyframes up{from{opacity:0;transform:translateY(14px)}}
+
+/* reveal on scroll */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+
+h2{margin:34px 4px 12px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);font-weight:700;display:flex;align-items:center;gap:10px}
+h2::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,rgba(255,255,255,.18),transparent)}
+
+/* LakeBench hero card */
+.lb{position:relative;margin-top:30px;border-radius:26px;padding:2px;overflow:hidden;
+  background:linear-gradient(135deg,var(--blue),#fff 45%,var(--blue2));}
+.lb::before{content:"";position:absolute;inset:-60%;
+  background:conic-gradient(from 0deg,transparent 0 70%,rgba(255,255,255,.9) 85%,transparent 100%);animation:spin 5s linear infinite}
+.lb-in{position:relative;border-radius:24px;background:linear-gradient(160deg,#fff 0%,var(--white) 60%,#e3e9ff 100%);color:var(--ink);padding:20px 18px 18px}
+.lb-top{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.logo{width:40px;height:40px;border-radius:12px;background:var(--blue);display:grid;place-items:center;flex:none;
+  box-shadow:0 6px 16px rgba(47,91,255,.45)}
+.logo svg{width:24px;height:24px}
+.lb h3{margin:0;font-size:24px;letter-spacing:-.4px}
+.lb h3 em{font-family:Georgia,serif;font-style:italic;color:var(--blue);font-weight:400}
+.badge{margin-left:auto;background:var(--ink);color:#fff;font-size:11px;font-weight:700;padding:5px 9px;border-radius:99px;letter-spacing:.04em}
+.lb p{margin:0 0 14px;color:#47507a;font-size:15px;line-height:1.5}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.tags span{font-size:12.5px;font-weight:700;color:var(--blue);background:rgba(47,91,255,.1);padding:6px 10px;border-radius:99px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:14px}
+.stat{background:#fff;border:1px solid var(--grey);border-radius:14px;padding:10px 4px;text-align:center}
+.stat b{display:block;font-size:24px;color:var(--ink);letter-spacing:-.5px}
+.stat b i{font-style:normal;color:var(--blue)}
+.stat span{font-size:11.5px;color:#6a7399;font-weight:600}
+.feat{list-style:none;margin:0 0 16px;padding:0;display:grid;gap:8px}
+.feat li{display:flex;gap:10px;align-items:flex-start;font-size:14.5px;color:#2a3256;line-height:1.35}
+.feat li::before{content:"";flex:none;width:18px;height:18px;margin-top:1px;border-radius:50%;background:var(--blue) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 12.5l4 4 8-9'/%3E%3C/svg%3E") center/12px no-repeat}
+.cta{position:relative;display:flex;align-items:center;justify-content:center;gap:8px;min-height:56px;border-radius:16px;
+  background:var(--blue);color:#fff;text-decoration:none;font-weight:800;font-size:17px;overflow:hidden;
+  box-shadow:0 10px 24px rgba(47,91,255,.4);transition:transform .15s}
+.cta::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg);animation:shine 3s ease-in-out infinite}
+@keyframes shine{0%,55%{left:-60%}100%{left:130%}}
+.cta:active,.card:active,.mini:active,.ig:active{transform:scale(.97)}
+.mini-row{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}
+.mini{display:flex;align-items:center;justify-content:center;min-height:48px;border-radius:14px;background:#fff;border:1px solid var(--grey);
+  color:var(--ink);text-decoration:none;font-weight:700;font-size:14.5px;text-align:center;padding:0 8px;transition:transform .15s,border-color .15s}
+.mini:hover{border-color:var(--blue)}
+
+/* resource cards */
+.card{position:relative;display:flex;align-items:center;gap:14px;min-height:72px;margin-bottom:10px;padding:12px 14px;border-radius:var(--r);
+  background:var(--white);color:var(--ink);text-decoration:none;overflow:hidden;transition:transform .15s,box-shadow .2s;
+  box-shadow:0 1px 0 rgba(255,255,255,.4) inset}
+.card::before{content:"";position:absolute;inset:0;background:radial-gradient(180px circle at var(--mx,50%) var(--my,50%),rgba(47,91,255,.16),transparent 70%);opacity:0;transition:opacity .2s}
+.card:hover::before,.card.touch::before{opacity:1}
+.card:hover{box-shadow:0 10px 28px rgba(47,91,255,.4)}
+.ico{flex:none;width:58px;height:46px;border-radius:14px;background:var(--blue);color:#fff;display:grid;place-items:center;
+  font-weight:800;font-size:10px;letter-spacing:.02em;text-transform:uppercase;padding:0 2px;overflow:hidden}
+.txt{flex:1;min-width:0}
+.txt b{display:block;font-size:16.5px;line-height:1.2}
+.txt span{display:block;margin-top:3px;font-size:13.5px;color:#586086;line-height:1.3}
+.go{flex:none;width:32px;height:32px;border-radius:50%;background:rgba(47,91,255,.1);color:var(--blue);display:grid;place-items:center;transition:transform .2s,background .2s}
+.card:hover .go{transform:translateX(3px);background:var(--blue);color:#fff}
+.latest{position:absolute;top:0;right:0;background:var(--blue);color:#fff;font-size:10px;font-weight:800;letter-spacing:.08em;padding:3px 10px;border-radius:0 0 0 10px}
+
+.ig{display:flex;align-items:center;justify-content:center;gap:10px;min-height:60px;margin-top:20px;border-radius:var(--r);
+  background:linear-gradient(120deg,var(--blue),#5a7dff,var(--blue));background-size:200% 100%;animation:slide 5s linear infinite;
+  color:#fff;text-decoration:none;font-weight:800;font-size:17px;box-shadow:0 10px 26px rgba(47,91,255,.4);transition:transform .15s}
+@keyframes slide{to{background-position:200% 0}}
+.ig svg{width:22px;height:22px}
+footer{margin-top:26px;text-align:center;color:var(--mute);font-size:12.5px}
+
+@media (min-width:600px){main{padding-top:56px}}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .rv{opacity:1;transform:none}
+}
 </style>
 </head>
 <body>
-<div class="bg"></div>
+<div class="bg"><i class="orb a"></i><i class="orb b"></i><i class="orb c"></i><i class="orb d"></i></div>
 <main>
-<h1>hunnur<em>.ai</em></h1>
-<p class="tag" id="tag"></p>
-<div id="list"></div>
+  <section class="hero">
+    <div class="avatar"><img src="dp.jpg" alt="Hunnur" width="124" height="124"></div>
+    <h1 id="name">Hunnur</h1>
+    <p class="role" id="role"></p>
+    <p class="type" id="type" aria-hidden="true"></p>
+    <p class="bio" id="bio"></p>
+    <span class="pill" id="place"></span>
+  </section>
+
+  <section class="lb rv" id="lb"></section>
+
+  <h2 class="rv">Free resources from my reels</h2>
+  <div id="list"></div>
+
+  <a class="ig rv" id="ig" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="#fff"/></svg>
+    <span>Follow @hunnur.ai</span>
+  </a>
+  <footer>hunnur.ai</footer>
 </main>
+
 <script>
+const $=id=>document.getElementById(id);
+const el=(t,c,x)=>{const e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e};
+const arrow='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+const reveal=n=>{n.classList.add('rv');io.observe(n)};
+
 fetch('links.json',{cache:'no-cache'}).then(r=>r.json()).then(d=>{
-  document.getElementById('tag').textContent=d.tagline;
-  const list=document.getElementById('list');
-  const items=[...d.links].sort((a,b)=>(b.date||'').localeCompare(a.date||''));
-  const mk=(l,cls,i)=>{
-    const a=document.createElement('a');
-    a.className='card'+(cls?' '+cls:'');a.href=l.url;a.target='_blank';a.rel='noopener';
-    a.style.animationDelay=(i*60)+'ms';
-    const i1=document.createElement('i');i1.textContent='→';
-    const b=document.createElement('b');b.textContent=l.title;
-    const s=document.createElement('span');s.textContent=l.note||'';
-    a.append(i1,b,s);return a;
-  };
-  items.forEach((l,i)=>list.appendChild(mk(l,'',i)));
-  list.appendChild(mk({title:'Instagram @hunnur.ai',note:'New reel every week',url:d.instagram},'ig',items.length));
-});
+  $('name').innerHTML='Hunnur<em>.ai</em>';
+  $('role').textContent=d.role;
+  $('bio').textContent=d.bio;
+  $('place').textContent='📍 '+d.place;
+  $('ig').href=d.instagram;
+
+  // typing line
+  const words=['Free data engineering resources','Building LakeBench','SQL · Python · PySpark'];
+  const ty=$('type');let w=0,c=0,del=false;
+  const still=matchMedia('(prefers-reduced-motion:reduce)').matches;
+  if(still){ty.textContent=words[0]}else(function tick(){
+    const s=words[w];
+    c+=del?-1:1;ty.textContent=s.slice(0,c);
+    let t=del?35:70;
+    if(!del&&c===s.length){del=true;t=1400}
+    else if(del&&c===0){del=false;w=(w+1)%words.length;t=300}
+    setTimeout(tick,t);
+  })();
+
+  // LakeBench
+  const L=d.lakebench,box=$('lb'),inn=el('div','lb-in');
+  const top=el('div','lb-top');
+  const logo=el('div','logo');
+  logo.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"><path d="M3 9c3-3 6 3 9 0s6 3 9 0M3 15c3-3 6 3 9 0s6 3 9 0"/></svg>';
+  const h=el('h3');h.innerHTML='Lake<em>Bench</em>';
+  top.append(logo,h,el('span','badge','START FREE'));
+  inn.append(top,el('p',null,L.pitch));
+  const tags=el('div','tags');L.tags.forEach(t=>tags.append(el('span',null,t)));inn.append(tags);
+  const stats=el('div','stats');
+  L.stats.forEach(s=>{
+    const a=el('div','stat'),b=el('b'),n=el('i','',0);
+    b.append(n,'+');a.append(b,el('span',null,s.label));stats.append(a);
+    n.dataset.to=s.n;
+  });
+  inn.append(stats);
+  const ul=el('ul','feat');L.features.forEach(f=>ul.append(el('li',null,f)));inn.append(ul);
+  const cta=el('a','cta');cta.href=L.url;cta.target='_blank';cta.rel='noopener';
+  cta.innerHTML='<span>Open lakebench.in</span>'+arrow;inn.append(cta);
+  const row=el('div','mini-row');
+  L.buttons.forEach(b=>{const a=el('a','mini',b.title);a.href=b.url;a.target='_blank';a.rel='noopener';row.append(a)});
+  inn.append(row);box.append(inn);
+  io.observe(box);
+  // count up when visible
+  new IntersectionObserver((es,ob)=>es.forEach(e=>{if(!e.isIntersecting)return;ob.disconnect();
+    stats.querySelectorAll('i').forEach(n=>{const to=+n.dataset.to,t0=performance.now();
+      (function f(t){const p=Math.min(1,(t-t0)/1200),v=Math.round(to*(1-Math.pow(1-p,3)));n.textContent=v;if(p<1)requestAnimationFrame(f)})(t0)})
+  }),{threshold:.4}).observe(stats);
+
+  // resource cards
+  const list=$('list');
+  [...d.links].sort((a,b)=>(b.date||'').localeCompare(a.date||'')).forEach((l,i)=>{
+    const a=el('a','card');a.href=l.url;a.target='_blank';a.rel='noopener';
+    a.append(el('div','ico',l.tag||'Link'));
+    const t=el('div','txt');t.append(el('b',null,l.title),el('span',null,l.note||''));
+    const g=el('div','go');g.innerHTML=arrow;
+    a.append(t,g);
+    if(i===0)a.append(el('span','latest','LATEST'));
+    const glow=ev=>{const r=a.getBoundingClientRect(),p=ev.touches?ev.touches[0]:ev;
+      a.style.setProperty('--mx',(p.clientX-r.left)+'px');a.style.setProperty('--my',(p.clientY-r.top)+'px')};
+    a.addEventListener('pointermove',glow);
+    a.addEventListener('touchstart',e=>{glow(e);a.classList.add('touch')},{passive:true});
+    a.addEventListener('touchend',()=>setTimeout(()=>a.classList.remove('touch'),250));
+    a.style.transitionDelay=(i*70)+'ms';
+    list.append(a);reveal(a);
+  });
+  document.querySelectorAll('h2.rv,#ig').forEach(n=>io.observe(n));
+}).catch(()=>{document.querySelector('main').append(el('p','bio','Links are loading. Please refresh.'))});
 </script>
 </body>
 </html>

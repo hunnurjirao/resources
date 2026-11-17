@@ -1,23 +1,53 @@
 {
-  "name": "hunnur.ai",
-  "tagline": "Free data engineering resources, one reel at a time.",
+  "name": "Hunnur",
+  "handle": "hunnur.ai",
+  "role": "AI & Data Engineer",
+  "bio": "Building AI and Data systems by day. Building myself by night.",
+  "place": "Bangalore",
   "instagram": "https://www.instagram.com/hunnur.ai/",
+  "lakebench": {
+    "title": "LakeBench",
+    "url": "https://lakebench.in",
+    "pitch": "Learn and practise data engineering in your browser. No cluster. No install. Just the tab.",
+    "stats": [
+      { "n": 200, "label": "lessons" },
+      { "n": 380, "label": "practice problems" },
+      { "n": 30, "label": "notebooks" }
+    ],
+    "tags": ["SQL", "Python", "Pandas", "PySpark"],
+    "features": [
+      "Predict the output, then run it",
+      "Interview-style practice problems",
+      "Timed mock interviews with scoring",
+      "Case studies and CV projects",
+      "Jobs board and progress tracker"
+    ],
+    "buttons": [
+      { "title": "Free studio", "url": "https://lakebench.in/studio" },
+      { "title": "Daily problem", "url": "https://lakebench.in/daily" },
+      { "title": "Start learning", "url": "https://lakebench.in/learn" },
+      { "title": "Jobs board", "url": "https://lakebench.in/jobs" }
+    ]
+  },
   "links": [
     {
       "title": "Data Engineering Zoomcamp",
       "note": "Free 9-week course with a real project",
+      "tag": "Course",
       "url": "https://github.com/DataTalksClub/data-engineering-zoomcamp",
       "date": "2026-09-01"
     },
     {
       "title": "Data Engineer Handbook",
       "note": "Free GitHub repo to learn data engineering",
+      "tag": "GitHub",
       "url": "https://github.com/DataExpert-io/data-engineer-handbook",
       "date": "2026-07-19"
     },
     {
       "title": "SQLBolt",
       "note": "Free interactive SQL lessons",
+      "tag": "SQL",
       "url": "https://sqlbolt.com",
       "date": "2026-06-07"
     }
