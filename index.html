@@ -83,9 +83,7 @@ h2::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,rgba(255
   background:conic-gradient(from 0deg,transparent 0 70%,rgba(255,255,255,.9) 85%,transparent 100%);animation:spin 5s linear infinite}
 .lb-in{position:relative;border-radius:24px;background:linear-gradient(160deg,#fff 0%,var(--white) 60%,#e3e9ff 100%);color:var(--ink);padding:20px 18px 18px}
 .lb-top{display:flex;align-items:center;gap:10px;margin-bottom:8px}
-.logo{width:40px;height:40px;border-radius:12px;background:var(--blue);display:grid;place-items:center;flex:none;
-  box-shadow:0 6px 16px rgba(47,91,255,.45)}
-.logo svg{width:24px;height:24px}
+.logo{width:44px;height:44px;flex:none;object-fit:contain;filter:drop-shadow(0 4px 8px rgba(47,91,255,.35))}
 .lb h3{margin:0;font-size:24px;letter-spacing:-.4px}
 .lb h3 em{font-family:Georgia,serif;font-style:italic;color:var(--blue);font-weight:400}
 .badge{margin-left:auto;background:var(--ink);color:#fff;font-size:11px;font-weight:700;padding:5px 9px;border-radius:99px;letter-spacing:.04em}
@@ -196,9 +194,8 @@ fetch('links.json',{cache:'no-cache'}).then(r=>r.json()).then(d=>{
   // LakeBench
   const L=d.lakebench,box=$('lb'),inn=el('div','lb-in');
   const top=el('div','lb-top');
-  const logo=el('div','logo');
-  logo.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"><path d="M3 9c3-3 6 3 9 0s6 3 9 0M3 15c3-3 6 3 9 0s6 3 9 0"/></svg>';
-  const h=el('h3');h.innerHTML='Lake<em>Bench</em>';
+  const logo=el('img','logo');logo.src='lb-logo.png';logo.alt='LakeBench logo';logo.width=44;logo.height=44;
+  const h=el('h3',null,'LakeBench');
   top.append(logo,h,el('span','badge','START FREE'));
   inn.append(top,el('p',null,L.pitch));
   const tags=el('div','tags');L.tags.forEach(t=>tags.append(el('span',null,t)));inn.append(tags);
