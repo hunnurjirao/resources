@@ -78,6 +78,14 @@
   },
   "links": [
     {
+      "date": "2026-11-18",
+      "title": "Start Data Engineering",
+      "note": "100+ free articles and hands-on projects",
+      "tag": "Site",
+      "cat": "Data Eng",
+      "url": "https://www.startdataengineering.com"
+    },
+    {
       "date": "2026-11-16",
       "title": "OverTheWire Bandit",
       "note": "Learn Linux commands by playing a free game",
