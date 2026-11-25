@@ -78,6 +78,14 @@
   },
   "links": [
     {
+      "date": "2026-11-25",
+      "title": "dbdiagram.io",
+      "note": "Draw a star schema for free: type code, get the diagram",
+      "tag": "Tool",
+      "cat": "Data Eng",
+      "url": "https://dbdiagram.io"
+    },
+    {
       "date": "2026-11-20",
       "title": "SQL Murder Mystery",
       "note": "Solve a murder by writing SQL queries, free in your browser",
